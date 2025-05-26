@@ -1,0 +1,91 @@
+/* General styling for content with padding */
+.content {
+  padding: 20px;
+}
+
+/* Styling for sections inside the content */
+.content section {
+  max-width: 90%; /* Limits section width to 90% */
+  margin: 50px auto 0; /* Centers the section and adds top margin */
+}
+
+/* Centers images by setting auto margins */
+.center-img {
+  margin-left: auto;
+  margin-right: auto;
+  display: block;
+}
+
+/* Styling for the top section with flexbox layout */
+.top-section {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-around; /* Distributes space evenly between elements */
+}
+
+/* Limits the width of the main title in the top section */
+.top-section h1 {
+  max-width: 500px; /* Sets a maximum width for the heading */
+}
+
+/* Styling for the image in the top section */
+.top-section img {
+  max-width: 50%; /* Limits image width to 50% of its container */
+  border-radius: 10%; /* Rounds the corners of the image */
+}
+
+/* Layout for the contents wrapper, using flexbox */
+.contents-wrapper {
+  display: flex; 
+  flex-direction: row;
+  align-items: center;
+  gap: 50px;
+}
+
+/* Styling for the text wrapper with a background and padding */
+.text-wrapper {
+  background-color: #2C6A2C; /* Green background */
+  color: #fff;
+  padding: 20px;
+  border-top-left-radius: 20px; /* Rounds the top-left corner */
+  border-bottom-right-radius: 20px; /* Rounds the bottom-right corner */
+}
+
+/* Padding for list items inside the text wrapper */
+.text-wrapper ul {
+  padding: 0 20px;
+}
+
+/* Margin for list items inside the text wrapper */
+.text-wrapper li {
+  margin: 10px 0 0;
+}
+
+/* Both the text-wrapper and image-wrapper are set to take 50% of the available width */
+.text-wrapper, .image-wrapper {
+  flex: 0 1 50%; /* Makes each take 50% width of the container */
+}
+
+/* Styling for images in the image wrapper */
+.image-wrapper img {
+  max-width: 450px;
+  min-width: 450px;
+  border-radius: 10%;
+  object-fit: cover; /* Ensures the image covers the area without distortion */
+  min-height: 300px;
+  max-height: 300px;
+}
+
+/* Media query for responsive design when screen width is 805px or smaller */
+@media (max-width: 805px) {
+  /* Changes the direction of the flex container to stack items vertically */
+  .contents-wrapper {
+    flex-direction: column;
+  }
+
+  /* Resets the max-width of sections for smaller screens */
+  .content section {
+    max-width: unset; /* Removes the max-width restriction */
+  }
+}

@@ -1,0 +1,377 @@
+
+* { /* Reset the styling of the whole website */
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+body {
+  scroll-behavior: smooth;
+}
+
+/* Heading Styles */
+h1 {
+  font-size: 48px;
+  line-height: 72px; /* 1.5 times font-size */
+  margin-bottom: 32px;
+}
+
+h2 {
+  font-size: 32px;
+  line-height: 48px;
+  margin-bottom: 28px;
+}
+
+h3 {
+  font-size: 24px;
+  line-height: 36px;
+  margin-bottom: 24px;
+}
+
+h4 {
+  font-size: 20px;
+  line-height: 30px;
+  margin-bottom: 20px;
+}
+
+h5 {
+  font-size: 18px;
+  line-height: 27px;
+  margin-bottom: 18px;
+}
+
+/* Body Text */
+body, p {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 24px;
+}
+
+/* Header styling */
+header.header {
+  background-color: #2C6A2C; /* Background color for the header */
+}
+
+header .header-wrapper {
+  max-width: 900px;
+  display: flex;
+  margin: 0 auto;
+}
+
+/* Logo on navigation */
+.logo-div {
+  position: relative;
+}
+
+.logo {
+  display: flex;
+  height: 80px;
+}
+
+/* Navigation links styling */
+.nav-links {
+  display: flex;
+  align-items: center;
+  list-style-type: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  display: block;
+  padding: 30px 16px;
+  color: white;
+  text-decoration: none;
+}
+
+nav a.active{
+  text-decoration: underline;
+}
+
+.nav-links a:hover {
+  background-color: #2e882e;
+  text-decoration: underline;
+  color: #fff;
+}
+
+.nav-links li {
+  position: relative; 
+}
+
+/* Main container */
+.main-container {
+  display: flex; /* Makes the main content display properly with the side bar */
+  max-width: 100%;
+  margin: auto;
+  min-height: 70vh;
+}
+
+.main-container-home{
+  max-width: 100%;
+  margin: auto;
+  min-height: 70vh;
+  text-align: center;
+}
+
+.main-container-home h1{
+  padding-top: 20px;
+}
+
+.main-container-home p{
+  padding-bottom: 20px;
+}
+
+/* Content page card */
+.content-pages-card {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.content-page-card {
+  width: 300px;
+  background-color: #ffffff;
+  box-shadow: 2px 2px 10px #202020;
+  transition: transform 0.3s;
+  padding: 15px;
+}
+
+.content-pages-card .content-page-card a{
+  text-decoration: none;
+}
+
+.content-page-card:hover {
+  transform: scale(1.05);
+}
+
+.content-page-card img {
+  width: 100%;
+  object-fit: cover; /* maintain the proportions of the image to not cause distortion */
+}
+
+.content-page-card h3 {
+  color: #2C6A2C;
+  font-size: 22px;
+  margin-top: 10px;
+}
+
+.content-page-card p {
+  color: #000000;
+  padding: 10px;
+}
+
+.content h1 {
+  text-align: center;
+  padding: 5px;
+  padding-bottom: 30px;
+}
+
+.content h2 {
+  text-align: center;
+  padding: 5px;
+}
+
+.content p{
+  padding: 5px;
+}
+
+.top {
+  position: fixed;
+  bottom: 5%;
+  right: 5%;
+}
+
+.top a {
+  padding: 10px 20px; /* Adds padding for button-like feel */
+  background-color: #2C6A2C; /* Button color */
+  color: #fff; /* Text color */
+  text-decoration: none; /* Removes underline */
+  border-radius: 20px; /* Rounds the corners */
+  font-size: 12px; /* Adjust font size */
+  font-weight: bold; /* Make the text stand out */
+}
+
+.top a:hover {
+  background-color: #10b815; /* Darker shade on hover */
+  color: #fff;
+  text-decoration: underline;
+  box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2); /* Adds a subtle shadow */
+}
+
+.line-above-footer {
+  background-color: #2C6A2C;
+  height: 3px;
+  width: 100%;
+}
+
+/* Footer styling */
+footer {
+  background-color: #707070;
+  padding: 20px 0;
+  color: #f2fdfa;
+  width: 100%;
+}
+
+.footer-container a:hover{
+  background-color: #929292;
+}
+
+.footer-container {
+  max-width: 600px;
+  margin: 0 auto;
+  align-items: center;
+  padding-bottom: 30px ;
+}
+
+.footer-header {
+  font-size: 16px;
+  color: #e8fff9;
+  margin: 1px;
+  letter-spacing: 1px;
+  text-transform: uppercase;
+}
+
+.footer-links {
+  display: flex;
+  gap: 10px; /* space between the names */
+  align-items: center;
+}
+
+.footer-links a {
+  text-decoration: none;
+  color: #f2fdfa;
+  font-size: 15px;
+  justify-content: center;
+  padding: 30px 16px;
+}
+
+.copyright {
+  text-align: center;
+  margin: 0;
+  font-size: 15px;
+}
+
+/* Sidebar styling */
+.sidebar {
+  width: 100%;
+  max-width: 300px;
+  background-color: #f5f5f5;
+  padding: 20px;
+}
+
+.sidebar-links {
+  list-style: none;
+  padding: 0;
+  position: sticky;
+  height: fit-content;
+  top: 60px;
+}
+
+.sidebar-links a {
+  text-decoration: none;
+  font-size: 18px;
+  display: block;
+  padding: 10px;
+  color: #2170cc;
+}
+
+.sidebar-links a:hover {
+  text-decoration: underline;
+  font-weight: bold;
+  color: #08227f;
+}
+
+
+@media (max-width: 805px) {
+
+  /* Headings and text responsiviness */
+  h1 {
+    font-size: 36px;
+    line-height: 54px;
+    margin-bottom: 24px;
+  }
+  h2 {
+    font-size: 28px;
+    line-height: 42px;
+    margin-bottom: 24px;
+  }
+  h3 {
+    font-size: 22px;
+    line-height: 33px;
+    margin-bottom: 20px;
+  }
+  h4 {
+    font-size: 18px;
+    line-height: 27px;
+    margin-bottom: 18px;
+  }
+  h5 {
+    font-size: 16px;
+    line-height: 24px;
+    margin-bottom: 16px;
+  }
+  body, p {
+    font-size: 14px;
+    line-height: 21px;
+    margin-bottom: 16px;
+  }
+
+  header .header-wrapper{
+    flex-direction: column;
+  }
+
+  nav {
+    flex-wrap: wrap;
+    padding: 0px;
+  }
+
+  .nav-links {
+    flex-basis: 100%;
+    flex-wrap: wrap;
+    gap: 0px;
+  }
+
+  .nav-links li {
+    flex-basis: 100%;
+  }
+
+  .nav-links a {
+    text-align: center;
+    border-top: 1px solid white;
+    padding: 10px;
+  }
+
+  .logo {
+    position: relative;
+  }
+
+  .sidebar {
+    max-width: 100%;
+    text-align: center;
+  }
+
+  .main-container {
+    display: block;
+  }
+
+  .footer-links{
+    padding-left: 15px;
+  }
+
+  .logo-div{
+    margin: 0 auto;
+  }
+  
+  .footer-container{
+    flex-direction: column;
+  }
+
+  .main-container-home{
+    display: block;
+  }
+
+  .content-pages-card{
+    display: block;
+    display: grid; /* this makes the cards card to display in the center*/
+  }
+}

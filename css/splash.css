@@ -1,0 +1,72 @@
+/* Loader styles */
+.loader {
+    width: 120px; /* Set width of the loader */
+    height: 20px; /* Set height of the loader */
+    
+    /* Create the mask effect for the loader animation using linear gradient */
+    -webkit-mask: linear-gradient(90deg, #2C6A2C 70%, #0000 0) 0/20%;
+    
+    /* Background style with gradient for the loader */
+    background: linear-gradient(#2C6A2C 0 0) 0/0% no-repeat #ddd;
+    
+    /* Animation for the loader */
+    animation: l4 2s infinite steps(6); /* Infinite loop with 6 steps in the animation */
+}
+
+/* Keyframes for loader animation */
+@keyframes l4 {
+    100% {
+        background-size: 120%; /* Expands the background gradient */
+    }
+}
+
+/* Body and HTML full-height setup */
+body,
+html {
+    height: 100%; /* Ensure both body and HTML take full height */
+}
+
+/* Style for splash screen background image */
+.splash-screen-image {
+    background-image: url("../assets/splash/splash.jpg"); /* Set background image */
+    background-repeat: no-repeat; /* Prevent background image from repeating */
+    background-position: center; /* Center the background image */
+    background-size: cover;
+    background-attachment: fixed; /* Keep background fixed during scrolling */
+    height: 100%;
+    width: 100%;
+    /* Using position absolute and z-index of -1 to make the text visible */
+    z-index: -1;
+    position: absolute;
+}
+
+/* Splash screen container style */
+.splash-screen {
+    width: 100%;
+    height: 100%; 
+    display: flex; /* Use flexbox to layout the content */
+}
+
+/* Content area styling within splash screen */
+.splash-screen .splash-screen-content {
+    background-color: rgba(108, 122, 137, 0.6); /* Semi-transparent background color */
+    display: flex; /* Use flexbox to layout content inside */
+}
+
+/* Styling for text inside the content area */
+.splash-screen .splash-screen-content-text {
+    max-width: 80%; /* Limit the text container width to 80% */
+    margin: 0 auto; /* Center the content horizontally */
+    color: #fff;
+    text-align: center;
+    display: flex; /* Use flexbox to layout content inside */
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex-grow: 1; /* Allow text container to grow and fill available space */
+}
+
+/* Style for the unordered list inside splash screen content */
+.splash-screen .splash-screen-content ul {
+    list-style: none; /* Remove default list styling */
+}

@@ -1,0 +1,427 @@
+/* Main container for volunteer section */
+.main-container-volunteer {
+    display: block;
+    padding: 20px;
+    max-width: 80%; /* Limit the width of the container to 80% */
+    margin: 0 auto; /* Center the container horizontally */
+}
+
+/* Centered heading 2 style */
+h2 {
+    text-align: center;
+}
+
+/* Style for top section header */
+.top-section h1 {
+    text-align: center;
+}
+
+/* Filters section styling (flexbox layout) */
+.top-section-filters {
+    display: flex; /* Use flexbox for layout */
+    justify-content: space-between; /* Space out items evenly */
+    align-items: center;
+    margin-bottom: 25px;
+}
+
+/* Styling for the select filter input */
+.top-section-filters select {
+    background-color: #fff;
+    width: 250px; /* Set the width of the select box */
+    border-radius: 10px; /* Rounded corners */
+    border: 3px solid #2C6A2C;
+    padding: 15px 10px; /* Padding inside the select box */
+    font-size: 16px;
+    font-weight: bold;
+    text-transform: uppercase;
+    color: #fff;
+    background-color: #2C6A2C;
+}
+
+/* Section for displaying volunteer cards */
+.cards-section {
+    margin-bottom: 50px;
+}
+
+/* Grid layout for card wrapper */
+.cards-wrapper {
+    display: grid; /* Grid layout */
+    grid-auto-columns: 1fr;
+    grid-auto-rows: 1fr;
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    grid-template-rows: 1fr; /* Single row layout */
+    gap: 30px; /* Space between grid items */
+    overflow-y: scroll; /* Allow vertical scrolling */
+    max-height: 550px; /* Limit height for scrolling */
+}
+
+/* Style for the "more cards" button */
+.more_cards_button {
+    grid-column: 1 / -1;
+    justify-self: center;
+}
+
+/* Volunteer card layout */
+.card-volunteer {
+    display: flex;
+    flex-direction: column;
+    background-color: #f5f5f5;
+    border-radius: 15px;
+}
+
+/* Duration section inside the card */
+.volunteer__contentWrapper__duration {
+    margin: 0 0 10px;
+}
+
+.volunteer__contentWrapper__duration .duration_label {
+    font-weight: bold;
+}
+
+/* Description section inside the card */
+.volunteer__contentWrapper__description {
+    margin: 0 0 10px;
+}
+
+/* Buttons section at the bottom of the card */
+.card-volunteer .volunteer__contentWrapper__buttons {
+    display: flex; /* Use flexbox to align buttons */
+    gap: 10px; /* Space between buttons */
+    margin-top: auto; /* Push buttons to the bottom */
+}
+
+/* Styling for view project and apply buttons */
+.card-volunteer .view_project, .card-volunteer .apply_button {
+    background-color: #2C6A2C; /* Green background */
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%;
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold;
+    text-decoration: none; /* Remove underline from link buttons */
+}
+
+/* Hover effect for view project button */
+.card-volunteer .view_project:hover {
+    background-color: #074609; /* Darker green on hover */
+    text-decoration: underline; /* Adds underline to the link buttons */
+}
+
+/* Styling for apply button */
+.card-volunteer .apply_button {
+    background-color: rgb(4, 193, 193);
+}
+
+/* Hover effect for apply button */
+.card-volunteer .apply_button:hover {
+    background-color: rgb(3, 106, 106); /* Darker colour */
+    text-decoration: underline;
+}
+
+/* Styling for the image inside the volunteer card */
+.card-volunteer__imageWrapper img {
+    width: 100%; /* Make image take full width */
+    border-top-left-radius: 15px; /* Rounded top left corner */
+    border-top-right-radius: 15px; /* Rounded top right corner */
+    object-fit: cover; /* Make sure image covers the area without stretching */
+    min-height: 300px; /* Minimum height for image */
+    max-height: 300px; /* Maximum height for image */
+}
+
+/* Content wrapper inside the card */
+.card-volunteer__contentWrapper {
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+}
+
+/* Card details section inside the volunteer card */
+.card-volunteer__contentWrapper__details {
+    margin: 0 0 10px; /* Add bottom margin */
+}
+
+/* Icons list inside the volunteer card details */
+.volunteer__contentWrapper__detailsIcons ul {
+    list-style-type: none; /* Remove bullet points */
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+/* Styling for each icon list item */
+.volunteer__contentWrapper__detailsIcons ul li {
+    display: flex;
+    flex-direction: column;
+    justify-items: center;
+    align-items: center;
+    text-align: center;
+    max-width: 150px;
+    border: 1px solid #fff;
+    background-color: #fff;
+    border-radius: 15px;
+    padding: 10px;
+    color: #074609;
+    font-weight: bold;
+    gap: 10px;
+}
+
+/* Styling for icon SVGs inside the list items */
+.volunteer__contentWrapper__detailsIcons ul li svg {
+    max-width: 50px;
+    max-height: 50px;
+}
+
+/* Location section inside volunteer card */
+.card-volunteer__contentWrapper__detailsInfo .location {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 20px;
+}
+
+/* Styling for location SVGs */
+.card-volunteer__contentWrapper__detailsInfo .location svg {
+    max-width: 20px;
+    max-height: 20px;
+}
+
+/* Bold text style for details */
+.card-volunteer__contentWrapper__detailsInfo p {
+    font-weight: bold;
+}
+
+/* Reviews section styling */
+.reviews-section {
+    margin-bottom: 50px;
+}
+
+/* Container for review items */
+.reviews-section__reviewsContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 50px;
+}
+
+/* Text section inside the reviews container */
+.reviews-section__reviewsText {
+    flex: 0 1 40%;
+    display: flex;
+    flex-grow: 1;
+    flex-direction: column;
+}
+
+/* Styling for average review score */
+.review_average_score {
+    font-size: 36px; /* Large font size */
+    color: #407742;
+    font-weight: bold;
+    font-family: 'Courier New', Courier, monospace; /* Monospace font */
+    margin-bottom: 20px;
+}
+
+/* "See all reviews" button styling */
+.review_all_button {
+    margin-top: auto;
+    padding: 10px;
+    background-color: #2C6A2C;
+    border-radius: 50px;
+    text-align: center;
+    width: 200px;
+    color: #fff;
+    text-decoration: none;
+}
+
+/* Hover effect for "see all reviews" button */
+.review_all_button:hover {
+    color: #fff;
+    text-decoration: underline;
+    background-color: #074609; /* Dark green on hover */
+    border-color: #2C6A2C; /* Green border on hover */
+    text-decoration: underline;
+}
+
+/* Container for review cards */
+.reviews-section__reviewsContainerCards {
+    display: flex; 
+    flex-direction: row;
+    justify-content: space-between;
+    gap: 25px;
+}
+
+/* Styling for individual review cards */
+.reviews-section__reviewsContainerCards__card {
+    width: 100%;
+    max-width: 500px;
+    border: 1px solid #000;
+    border-radius: 15px;
+    padding: 20px;
+    position: relative;
+}
+
+/* Review score styling */
+.review_score {
+    font-weight: bold; 
+    font-size: 18px; 
+    font-style: italic;
+}
+
+/* Review text styling */
+.review_text {
+    margin-top: 20px;
+}
+
+/* Review date position */
+.review_date {
+    font-family: 'Courier New', Courier, monospace;
+    position: absolute; /* Absolute positioning */
+    top: 20px; /* Position from top */
+    right: 20px; /* Position from right */
+}
+
+/* Form section styling */
+.form-section {
+    max-width: 500px; /* Maximum width of 500px for the form */
+    margin: 0 auto; /* Center the form */
+    text-align: center; /* Center the form text */
+}
+
+/* Form layout using grid */
+.form-section form {
+    display: grid; /* Use grid layout */
+    grid-template-columns: repeat(2, 1fr); /* 2 columns layout */
+    grid-template-rows: repeat(1, 1fr); /* 1 row layout */
+    grid-column-gap: 20px; /* Space between columns */
+    grid-row-gap: 30px; /* Space between rows */
+}
+
+/* Individual form field styling */
+.firstName { grid-area: 1 / 1 / 2 / 2; }
+.lastName { grid-area: 1 / 2 / 2 / 3; }
+.message { grid-area: 2 / 1 / 3 / 3; }
+.form_buttons { grid-area: 3 / 1 / 4 / 3; }
+
+/* Styling for form field labels and inputs */
+.form-field {
+    display: flex; /* Flexbox for form fields */
+    flex-direction: column; /* Stack label and input vertically */
+}
+
+/* Label styling */
+.form-field label {
+    text-align: left;
+    padding-left: 10px;
+    margin-bottom: 5px;
+}
+
+/* Input field styling */
+.form-field input {
+    height: 50px;
+    padding: 5px 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+/* Textarea field styling */
+.form-field textarea {
+    padding: 20px 10px;
+    border-radius: 10px;
+    border: 2px solid #000;
+}
+
+/* Label font style */
+.form-field label {
+    font-weight: bold;
+    font-size: 16px;
+}
+
+/* Form button styling */
+.form_buttons {
+    display: flex;
+    flex-direction: row;
+    gap: 20px; 
+    max-width: 200px;
+    margin: 0 auto;
+}
+
+/* Submit and cancel buttons styling */
+.form_buttons .submit, .form_buttons .cancel {
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 5px;
+    width: 100%; 
+    text-align: center;
+    text-transform: uppercase;
+    font-weight: bold; 
+    text-decoration: none;
+    border: 1px solid transparent;
+    appearance: unset; 
+    cursor: pointer; 
+}
+
+
+.form_buttons .submit {
+    background-color: #2C6A2C; /* Green background */
+}
+
+/* Hover effect for submit button */
+.form_buttons .submit:hover {
+    background-color: #074609; /* Dark green on hover */
+    text-decoration: underline;
+}
+
+
+.form_buttons .cancel {
+    background-color: rgb(250, 24, 24); /* Red background */
+}
+
+/* Hover effect for cancel button */
+.form_buttons .cancel:hover {
+    background-color: rgb(199, 23, 23); /* Dark red on hover */
+    text-decoration: underline;
+}
+
+/* Styling on stars above the form */
+.form-stars {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    margin-bottom: 24px;
+}
+
+/* Making svg stars 50 * 50 pixel in size */
+.form-stars svg {
+    width: 50px;
+    height: 50px;
+}
+
+/* Changing fill and stroke on the svg stars on hover on path element */
+.form-stars svg path:hover {
+    fill: gold;
+    stroke: gold;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 805px) {
+
+    .main-container-volunteer {
+        max-width: unset;
+    }
+
+    .cards-wrapper {
+        grid-template-columns: unset;
+    }
+
+    .card-volunteer__imageWrapper img {
+        min-height: 200px;
+        max-height: 200px;
+    }
+
+    .top-section-filters {
+        flex-direction: column;
+    }
+}
